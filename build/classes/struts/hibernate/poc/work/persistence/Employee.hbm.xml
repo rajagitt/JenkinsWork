@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="struts.hibernate.poc.work.persistence.Employee" table="employeetab">
+		<id name="empid" type="int">
+			<column name="EMPID" />
+			<generator class="identity" />
+		</id>
+		<property name="empname" type="string">
+			<column name="EMPNAME" length="40" not-null="true" />
+		</property>
+		<property name="designation" type="string">
+			<column name="DESIGNATION" length="40" not-null="true" />
+		</property>
+		<property name="salary" type="java.lang.Integer">
+			<column name="SALARY" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>

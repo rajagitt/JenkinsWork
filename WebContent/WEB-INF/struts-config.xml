@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="userForm" type="struts.hibernate.poc.work.form.UserForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/employee" type="struts.hibernate.poc.work.action.UserAction" parameter="dispatch" name="userForm">
+			
+			<forward name="add" path="/employee/add.jsp" />
+		</action>
+		
+	</action-mappings>
+	
+	<message-resources parameter="null" />
+
+</struts-config>
